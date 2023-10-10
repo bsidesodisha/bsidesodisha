@@ -733,6 +733,9 @@ textarea {
         z-index: 9999;
         cursor: pointer;
     }
-
+ .inner-div {
+        display: contents;
+        justify-content: center;
+    }
 
 }
