@@ -409,8 +409,8 @@ body::-webkit-scrollbar {
     .about-main p {
         font-family: 'CustomFont2', sans-serif;
         font-size: 20px;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         text-align: justify;
         color: #717171;
     }
@@ -440,6 +440,33 @@ body::-webkit-scrollbar {
         font-family: 'CustomFont2', sans-serif !important;
         text-decoration: none;
         font-size: 10px;
+    }
+
+    .registrationtable {
+        margin: 0 auto;
+        width: 85%;
+    }
+
+    .namrediv img {
+        height: 100px;
+        width: auto;
+    }
+
+    .registrationtable tbody tr td {
+        height: 50px;
+        border-bottom: 1px solid #b42100;
+        border-left: 1px solid #b42100;
+        border-right: 1px solid #b42100;
+        color: rgb(202, 201, 201);
+        font-size: 10px;
+        font-family: 'CustomFont2', sans-serif;
+    }
+    .container-cardss {
+        padding: 0px 40px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -633,14 +660,16 @@ textarea {
 
 
 }
-.copyrightl{
+
+.copyrightl {
     color: #f4e9cdd2;
     font-family: 'CustomFont2', sans-serif;
     font-size: 14px;
     letter-spacing: 1px;
     font-weight: 100;
 }
-.copyrightl a{
+
+.copyrightl a {
     text-decoration: none;
     color: red;
     font-weight: 600;
