@@ -98,7 +98,7 @@
                     <div class="header">
                         <span>How to Participate</span>
                     </div>
-                    <div class="container" style=" display: flex; justify-content: space-between; padding-top: 10px;">
+                    <div class="container" style="display: flex; justify-content: space-between; padding-top: 10px;">
                         <div class="headingoned">
                             <p class="heading">- Submit Your Bug Bounty Reports: Share your findings and reports for review.</p>
                             <p class="heading">- Share Your Knowledge: Present your insights and expertise through presentations and workshops.</p>
@@ -110,10 +110,10 @@
             <br> <br>
             <div class="card" data-aos="fade-up" data-aos-duration="2500">
                 <div class="main-content">
-                    <div class "header">
+                    <div class="header">
                         <span>Why Participate</span>
                     </div>
-                    <div class="container" style=" padding-top: 10px;">
+                    <div class="container" style="padding-top: 10px;">
                         <div class="headingoned">
                             <p class="heading">- Showcase Your Skills: Put your expertise on display.</p>
                             <p class="heading">- Collaborate: Join forces with like-minded individuals.</p>
@@ -166,7 +166,7 @@
             <div class="main-smediv">
                 <div class="namrediv">
                     <img src="assets/images/odisha1.png" alt="">
-                    <div class="div" style=" display: flex; justify-content: center;">
+                    <div class="div" style="display: flex; justify-content: center;">
                         <ul class="social-icons">
                             <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                             <li><a href="https://twitter.com/bsidesodisha?s=21&t=06VVXAIKYELagmjmzw9Atg"><i class="fab fa-twitter"></i></a></li>
@@ -174,13 +174,82 @@
                             <li><a href="https://www.linkedin.com/company/bsides-odisha/"><i class="fab fa-linkedin"></i></a></li>
                         </ul>
                     </div>
-                    <h1 class="copyrightl">Copyright © 2023 BSides Odisha. All Rights Reserved | Made with ♥ by <a href="https://www.linkedin.com/in/shreeram-das-14324a195/" target="_blank">Shreeram</a></h1>
+                    <h1 class="copyrightl"> Copyright © 2023 bsidesodisha All Rights Reserved | Made with &hearts; by <a
+                            href="https://www.linkedin.com/in/shreeram-das-14324a195/" target="_blank">Shreeram</a>
+                    </h1>
                 </div>
+
             </div>
+
+
+
         </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-</script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+    <script>
+        // model
+        const openModalBtn = document.getElementById("openModal");
+        const modal = document.getElementById("myModal");
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        openModalBtn.addEventListener("click", function () {
+            modal.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", function () {
+            modal.classList.remove("active");
+        });
+
+        window.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.classList.remove("active");
+            }
+        });
+
+
+        //smooth
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Get all headacc elements
+        const headaccs = document.querySelectorAll('.headacc');
+
+        // Loop through each headacc element and add a click event listener
+        headaccs.forEach((headacc) => {
+            const pacc = headacc.nextElementSibling;
+
+            // Add click event listener
+            headacc.addEventListener('click', () => {
+                if (pacc.style.display === 'block') {
+                    pacc.style.display = 'none';
+                    pacc.style.maxHeight = '1';
+                } else {
+                    pacc.style.display = 'block';
+                    pacc.style.maxHeight = pacc.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // By default, show the first pacc element
+        const paccs = document.querySelectorAll('.pacc');
+        const lastPacc = paccs[paccs.length - 1];
+        lastPacc.style.display = 'block';
+        lastPacc.style.maxHeight = lastPacc.scrollHeight + 'px';
+
+
+    </script>
 </body>
+
 </html>
