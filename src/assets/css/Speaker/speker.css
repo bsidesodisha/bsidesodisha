@@ -235,6 +235,7 @@ body::-webkit-scrollbar {
 }
 
 .circle:nth-child(1) {
+    display: none;
     top: 300px;
     margin-left: -5px
 }
@@ -383,6 +384,7 @@ body::-webkit-scrollbar {
 }
 
 .circle2:nth-child(2) {
+    display: none;
     bottom: -310px;
     margin-left: 200px;
     animation-name: move-down1r;
